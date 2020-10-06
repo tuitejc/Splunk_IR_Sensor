@@ -11,8 +11,9 @@ char ssid[] = SECRET_SSID;        // your network SSID (name)
 char pass[] = SECRET_PASS;    // your network password (use for WPA, or use as key for WEP)
 int status = WL_IDLE_STATUS;     // the Wifi radio's status
 
-//server
-IPAddress server(54,202,69,14);  // numeric IP for Google (no DNS)
+
+// YOUR SPLUNK IP ADDRESS HERE
+IPAddress server(55,55,55,555);  // numeric IP for Google (no DNS)
 String payload = ""; //payload of data
 
 // Initialize the Ethernet client library
@@ -22,7 +23,7 @@ WiFiClient client;
 
 
 void setup() {
-  while (!Serial) delay(10);
+  //while (!Serial) delay(10);
   Serial.begin(9600);
   delay(100);
 
